@@ -1,25 +1,26 @@
 package edu.eci.ieti.taskplanner.model;
 
 public class User {
-    
-    private String password;
+
+    private String id;
     private String fullname;
     private String email;
-    private String userId;
+    private String password;
     
-    public User(String password, String fullname, String email, String userId) {
-        this.password = password;
+
+    public User(String userId, String fullname, String email, String password) {
+        this.id = userId;
         this.fullname = fullname;
         this.email = email;
-        this.userId = userId;
-    }
-
-    public String getPassword() {
-        return this.password;
-    }
-
-    public void setPassword(String password) {
         this.password = password;
+    }
+    
+    public String getId() {
+        return this.id;
+    }
+
+    public void setId(String userId) {
+        this.id = userId;
     }
 
     public String getFullname() {
@@ -38,22 +39,24 @@ public class User {
         this.email = email;
     }
 
-    public String getId() {
-        return this.userId;
+    public String getPassword() {
+        return this.password;
     }
 
-    public void setId(String userId) {
-        this.userId = userId;
+    public void setPassword(String password) {
+        this.password = password;
     }
+    
 
     @Override
     public String toString() {
         return "{" +
-            " password='" + getPassword() + "'" +
+            " userId='" + getId() + "'" +
             ", fullname='" + getFullname() + "'" +
             ", email='" + getEmail() + "'" +
-            ", id='" + getId() + "'" +
+            ", password='" + getPassword() + "'" +
             "}";
     }
+
 
 }
