@@ -28,8 +28,6 @@ class App extends Component {
   render() {
       return (
           <div>
-              {/* <!-- Implement a React compontent to render the list --> */}
-              {/* <UserList usersList={this.state.usersList}/> */}
               <UserList userList={this.state.userList}/>
               
           </div>
